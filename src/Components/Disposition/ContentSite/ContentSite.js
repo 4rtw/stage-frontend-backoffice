@@ -1,9 +1,11 @@
 import {Component} from "react";
+ {/* 
 import Breadcrumbs from "./Children/Breadcrumbs";
 import Menu from "./Children/Menu";
 import MainApp from "../../Application/Main/MainApp";
 import Login from "../../Application/Login/Login";
-
+*/}
+import CreateEnseignants from "../../Application/Enseignants/Create";
 class ContentSite extends Component{
 
     handleChange(){
@@ -12,10 +14,13 @@ class ContentSite extends Component{
 
     render() {
         return <div>
+             {/* 
             <Menu handleSidebar={() => this.handleChange()}/>
             <Breadcrumbs/>
             <MainApp/>
             <Login/>
+            */}
+            <CreateEnseignants />
         </div>
     }
 
