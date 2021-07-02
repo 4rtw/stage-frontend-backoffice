@@ -1,15 +1,15 @@
-import { Enseignants } from "../Modele/Enseignants"
+import { Enseignants } from "../Modele/Enseignants";
 
 class EnseignantsService {
-    ListService =[];
+  ListEnseignants = [];
 
-    ajouterEnseignants(nom,prenom,email){
-        let newEnseignants = new Enseignants();
-        newEnseignants.nom = nom;
-        newEnseignants.prenom = prenom;
-        newEnseignants.email = email;
+  ajouterEnseignants(nom, prenom, email) {
+    let newEnseignants = new Enseignants();
+    newEnseignants.nom = nom;
+    newEnseignants.prenom = prenom;
+    newEnseignants.email = email;
 
-        this.ListService.push(newEnseignants);
-    }
+    this.ListEnseignants.push(newEnseignants);
+  }
 }
-export default EnseignantsService
+export default EnseignantsService;
