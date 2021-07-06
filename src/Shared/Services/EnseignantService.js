@@ -1,10 +1,10 @@
 import axios from "axios";
-import { variables } from "../Variables/variables";//mcreer dossier Variables de aveo mamorona file ataoa variables 
+import { variables } from "..Variables/variables";
 
 class EnseignantsService {
-  ajouterEnseignants(enseignants) {
-    console.log(enseignants);
-    axios.post(variables.url + "/enseignant", enseignants).then(response =>{
+  ajouterEnseignants(Enseignants) {
+    console.log(Enseignants);
+    axios.post(variables.url + "Enseignanats", Enseignants).then(response =>{
       console.log(response);
     });
   }

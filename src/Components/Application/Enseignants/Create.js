@@ -1,6 +1,5 @@
 import { Component } from "react";
 import EnseignantsService from "../../../Shared/Services/EnseignantService";
-import {Enseignants} from "../../../Shared/Modele/Enseignants";
 
 class createEnseignants extends Component {
   enseignantsService = new EnseignantsService();
@@ -11,29 +10,29 @@ class createEnseignants extends Component {
       nom: "",
       prenom: "",
       email: "",
-      matricule :0,
+      matricules :"",
+      contacts : [],
     };
   }
-
   createEnseignants = event => {
     event.preventDefault();
 
-    let enseignants = new Enseignants();
-    enseignants.matricule = this.state.matricule;
-    enseignants.nom = this.state.nom;
-    enseignants.prenom = this.state.prenom;
+    let Enseignanats = new Enseignanats();
+    Enseignanats.matricules = this.state.matricules;
+    Enseignanats.nom = this.state.nom;
+    Enseignanats.prenom = this.state.prenom;
+    Enseignanats.contacts = this.state.contacts;
 
-    this.enseignantsService.ajouterEnseignants(enseignants);
+    this.EnseignantsService.ajouterEnseignants(Enseignanats);
     console.log("Enseignants creer");
 
-    this.setState({ nom: "", prenom: "", matricule: 0});
+    this.setState({ nom: "", prenom: "", matricule: "" });
   };
-
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
   showEnseignants = () => {
-    console.log(this.enseignantsService.ListEnseignants);
+    console.log(this.EnseignantsService.ListEnseignants);
   };
 
   render() {
@@ -44,7 +43,7 @@ class createEnseignants extends Component {
             type="text"
             name="matricule"
             placeholder="Matricule de l'Enseignants"
-            value={this.state.matricule}
+            value={this.state.matricules}
             onChange={this.handleChange}
           />
           <input
@@ -61,11 +60,26 @@ class createEnseignants extends Component {
             value={this.state.prenom}
             onChange={this.handleChange}
           />
+          <input
+            type="text"
+            name="email"
+            placeholder="Mail de l'Enseignants"
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+          <div>
+        <form onSubmit={this.createEnseignants}>
+          <input
+            type="text"
+            name="contact"
+            placeholder="Contacts de l'Enseignants"
+            value={this.state.contacts}
+            onChange={this.handleChange}
+          />
           <button type="submit">Créer</button>
         </form>
-       
         <button onClick={() => this.showEnseignants()}>
-          Show Enseignants
+          Show Enseignanats
         </button>
       </div>
     );
