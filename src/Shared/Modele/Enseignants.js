@@ -2,12 +2,12 @@ export class Enseignants{
     nom ="";
     prenom = "";
     contacts = [];
-    matricules = "";
+    matricules = 0;
 
     constructor(){
         this.nom = "";
         this.prenom = "";
         this.contacts = [];
-        this.matricules = "";
+        this.matricules = 0;
     }
 }
