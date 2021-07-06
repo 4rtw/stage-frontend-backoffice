@@ -1,11 +1,13 @@
 export class Enseignants{
     nom ="";
     prenom = "";
-    email = "";
+    contacts = [];
+    matricules = "";
 
     constructor(){
         this.nom = "";
         this.prenom = "";
-        this.email = "";
+        this.contacts = [];
+        this.matricules = "";
     }
 }

@@ -1,15 +1,12 @@
-import { Enseignants } from "../Modele/Enseignants";
+import axios from "axios";
+import { variables } from "..Variables/variables";
 
 class EnseignantsService {
-  ListEnseignants = [];
-
-  ajouterEnseignants(nom, prenom, email) {
-    let newEnseignants = new Enseignants();
-    newEnseignants.nom = nom;
-    newEnseignants.prenom = prenom;
-    newEnseignants.email = email;
-
-    this.ListEnseignants.push(newEnseignants);
+  ajouterEnseignants(Enseignants) {
+    console.log(Enseignants);
+    axios.post(variables.url + "Enseignanats", Enseignants).then(response =>{
+      console.log(response);
+    });
   }
 }
 export default EnseignantsService;
