@@ -1,0 +1,30 @@
+.bigblue {
+    color: DodgerBlue;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+  .Disposition {
+      text-align: center;
+  }
+
+  nav {
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 10vh;
+      background: grey;
+      color:white;
+  }
+  .navlinks{
+      width : 40%;
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+      list-style: none;
+  }
+
+  .navlinks a{
+      text-decoration: none;
+  }
+ 

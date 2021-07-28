@@ -61,6 +61,13 @@ class createEnseignants extends Component {
             value={this.state.prenom}
             onChange={this.handleChange}
           />
+          <input
+            type="texte"
+            name="exemple"
+            placeholder="exemple"
+            value={this.state.nom}
+            onChange={this.handleChange}
+          />
           <button type="submit">Créer</button>
         </form>
        
